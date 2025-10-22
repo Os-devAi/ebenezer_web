@@ -47,7 +47,7 @@ const Banner = () => {
                             <div className="slide-overlay">
                                 <div className="slide-content">
                                     <h2>Bienvenido a Ebenezer</h2>
-                                    <p>Tu centro de bienestar y relajación</p>
+                                    <p>Donde el bienestar se encuentra con la excelencia profesional</p>
                                     <button className="cta-button">Reservar Cita</button>
                                 </div>
                             </div>

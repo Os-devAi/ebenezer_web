@@ -3,6 +3,7 @@ import './HomeHeader.css';
 
 const HomeHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,10 @@ const HomeHeader = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header className={`home-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
@@ -22,19 +27,25 @@ const HomeHeader = () => {
           </div>
           <div className="header-title">
             <span className="platform-name">Centro de Masajes</span>
-            <span className="platform-subtitle">Bienestar y Relajación</span>
+            <span className="platform-subtitle">Bienestar Profesional</span>
           </div>
         </div>
 
-        <nav className="nav-menu">
+        <nav className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#inicio" onClick={() => setIsMobileMenuOpen(false)}>Inicio</a></li>
+            <li><a href="#servicios" onClick={() => setIsMobileMenuOpen(false)}>Servicios</a></li>
+            <li><a href="#galeria" onClick={() => setIsMobileMenuOpen(false)}>Galería</a></li>
+            <li><a href="#nosotros" onClick={() => setIsMobileMenuOpen(false)}>Nosotros</a></li>
+            <li><a href="#contacto" onClick={() => setIsMobileMenuOpen(false)}>Contacto</a></li>
           </ul>
         </nav>
+
+        <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   );
