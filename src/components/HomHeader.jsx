@@ -27,7 +27,7 @@ const HomeHeader = () => {
           </div>
           <div className="header-title">
             <span className="platform-name">Centro de Masajes</span>
-            <span className="platform-subtitle">Bienestar Profesional</span>
+            <span className="platform-subtitle">By Sayda Martínez</span>
           </div>
         </div>
 

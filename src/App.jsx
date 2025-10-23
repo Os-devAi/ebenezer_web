@@ -4,6 +4,8 @@ import Banner from './components/Banner';
 import Services from './components/Services';
 import Gallery from './components/Gallery';
 import './App.css';
+import LocationMap from './components/LocationMap';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Banner />
       <Services />
       <Gallery />
+      <LocationMap />
+      <Footer />
       {/* Aquí puedes agregar más secciones como About, Contact, etc. */}
     </div>
   );

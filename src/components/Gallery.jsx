@@ -8,9 +8,9 @@ const Gallery = () => {
     'https://ik.imagekit.io/nhu6ngxhk/EbenezerPictures/picture_one.jpg',
     'https://ik.imagekit.io/nhu6ngxhk/EbenezerPictures/picture_three.jpg',
     'https://ik.imagekit.io/nhu6ngxhk/EbenezerPictures/picture_two.jpg',
-    'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    'https://images.unsplash.com/photo-1560090995-016e7b95d48f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-    'https://images.unsplash.com/photo-1591343395082-e120087004b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80'
+    'https://ik.imagekit.io/nhu6ngxhk/EbenezerPictures/image.png?updatedAt=1761251987479',
+    'https://ik.imagekit.io/nhu6ngxhk/EbenezerPictures/image1.png?updatedAt=1761251812906',
+    'https://ik.imagekit.io/nhu6ngxhk/EbenezerPictures/image22.png'
   ];
 
   const openModal = (image) => {
@@ -24,9 +24,8 @@ const Gallery = () => {
   return (
     <section id="galeria" className="gallery-section">
       <div className="container">
-        <h2 className="section-title">Nuestra Galería</h2>
-        <p className="section-subtitle">Conoce nuestras instalaciones y ambiente</p>
-
+        <h2 className="section-title-gallery">Nuestra Galería</h2>
+        
         <div className="gallery-grid">
           {galleryImages.map((image, index) => (
             <div

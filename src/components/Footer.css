@@ -1,0 +1,356 @@
+/* Footer.css */
+.nexus-footer {
+    background: linear-gradient(135deg, var(--cafe-profundo) 0%, var(--cafe-oscuro) 100%);
+    color: var(--crema-claro);
+    padding: 60px 0 20px;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--crema-oscuro);
+}
+
+.nexus-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(210, 180, 140, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 115, 85, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.nexus-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nexus-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--crema-oscuro);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+.logo-text {
+    background: linear-gradient(135deg, var(--crema-oscuro), var(--crema-medio));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Georgia', serif;
+}
+
+.nexus-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--crema-medio);
+    max-width: 300px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.link-group h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--crema-oscuro);
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+.link-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link-group li {
+    margin-bottom: 8px;
+}
+
+.link-group a {
+    color: var(--crema-medio);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-group a:hover {
+    color: var(--crema-oscuro);
+    transform: translateX(5px);
+}
+
+.social-links h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--crema-oscuro);
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(210, 180, 140, 0.1);
+    border: 2px solid rgba(210, 180, 140, 0.3);
+    border-radius: 50%;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+    background: var(--crema-oscuro);
+    transform: translateY(-3px) scale(1.1);
+    border-color: var(--crema-oscuro);
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.2);
+}
+
+.social-icon {
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(210, 180, 140, 0.2);
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.copyright p {
+    margin: 0;
+    color: var(--crema-medio);
+    font-size: 0.9rem;
+}
+
+.copyright strong {
+    color: var(--crema-oscuro);
+}
+
+.powered-by {
+    font-size: 0.8rem !important;
+    opacity: 0.8;
+}
+
+.legal-links {
+    display: flex;
+    gap: 25px;
+}
+
+.legal-links a {
+    color: var(--crema-medio);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.legal-links a:hover {
+    color: var(--crema-oscuro);
+}
+
+/* Elementos decorativos */
+.footer-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+.decoration-circle {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(210, 180, 140, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.decoration-circle:nth-child(2) {
+    animation-delay: 2s;
+    width: 80px;
+    height: 80px;
+}
+
+.decoration-circle:nth-child(3) {
+    animation-delay: 4s;
+    width: 120px;
+    height: 120px;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .social-links {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nexus-footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .nexus-description {
+        max-width: none;
+        margin: 0 auto;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .nexus-logo {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+    
+    .nexus-logo {
+        font-size: 1.5rem;
+    }
+    
+    .logo-icon {
+        font-size: 1.7rem;
+    }
+    
+    .link-group h4 {
+        font-size: 1.1rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .decoration-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .decoration-circle:nth-child(2) {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .decoration-circle:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Efectos de hover para tarjetas de enlaces */
+.link-group {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(210, 180, 140, 0.1);
+}
+
+.link-group:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(210, 180, 140, 0.2);
+    transform: translateY(-5px);
+}
