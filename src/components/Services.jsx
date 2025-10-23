@@ -75,7 +75,7 @@ const Services = () => {
                     ))}
                 </div>
 
-                <div className="contact-info">
+                {/* <div className="contact-info">
                     <div className="location">
                         <span className="location-icon">📍</span>
                         <span>Syracuse, NY</span>
@@ -92,7 +92,7 @@ const Services = () => {
                     <button className="info-button">
                         Más Información
                     </button>
-                </div>
+                </div> */}
             </div>
         </section>
     );
