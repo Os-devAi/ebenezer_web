@@ -15,7 +15,7 @@ function App() {
       <Services />
       <Gallery />
       <LocationMap />
-      <Footer />
+      {/* <Footer /> */}
       {/* Aquí puedes agregar más secciones como About, Contact, etc. */}
     </div>
   );
